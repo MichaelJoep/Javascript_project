@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="/budgetproject/style.css">
+    <link rel="stylesheet" href="/budgetproject/fonts/all.min.css">
+  
+</head>
+<body>
+   <h1>Budget Calculator</h1>
+   <!-- Monthly Savings-->
+   <section id="Monthly-Savings">
+        <a><h2 class="dropdown">Monthly Savings &#10162; </h2></a>
+        <header class="form-group">
+            <span class="input-group-text">Total ÑGN:</span>
+            <output id="Monthly-Savings-Output"></output>
+        </header>
+        <div class="form-group">
+            <label for="" class="control-label">Unplanned Fund: </label>
+            <div class="form-group">
+                <span class="input-group-text">NGN</span>
+                <input type="number" id="UnplannedFund"  placeholder="0.00" onkeyup="sum(this.value)">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="control-label">Investment: </label>
+            <div class="form-group">
+                <span class="input-group-text">NGN</span>
+                <input type="number" id="investment"  placeholder="0.00" onkeyup="sum(this.value)">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="control-label">Savings: </label>
+            <div class="form-group">
+                <span class="input-group-text">NGN</span>
+                <input type="number" id="savings" placeholder="0.00" onkeyup="sum(this.value)">
+            </div>
+        </div>
+   </section>
+
+   <!--Monthly Expenses-->
+   <section id="Monthly-Expenses">
+    <a><h2 class="dropdown">Monthly Expenses &#10162; </h2></a>
+    <header class="form-group">
+        <span class="input-group-text">Total ÑGN:</span>
+        <output id="Monthly-Expenses-Output"></output>
+    </header>
+    <div class="form-group">
+        <label for="" class="control-label">Food (groceries, dining out, cinema, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Food" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Clothing (Shoes, Jewelry, Children wears, Shirts, Gowns, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="investment" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Shelter (Rent, Mortage): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Shelter" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Household (Recharge cards, Ultility bills, cable, maintenance, Gas refiling, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Household" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Transportation: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Transportation" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Project (Building, Car Purchase, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Project" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Loans (School loan, rent loan etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Loans" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Health (medications, check up, herbs, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Health" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">School fee (Children, personal, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="School fee" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Personal (Entertainment, gifts, charity, assistance, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Personal" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Tithe : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Tithe" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Miscellaneous (Children care, household etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Miscellaneous" placeholder="0.00">
+        </div>
+    </div>
+</section>
+<!-- Annual Expenses-->
+<section id="Annual-Expenses">
+    <a><h2 class="dropdown">Annual Expesnses &#10162; </h2></a>
+    <header class="form-group">
+        <span class="input-group-text">Total ÑGN:</span>
+        <output id="Annual-Expenses-Output"></output>
+    </header>
+    <div class="form-group">
+        <label for="" class="control-label">Tuition: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Tuition" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Homeowner's/Renter's Insurance: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="investment" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Car (registration, inspection, insurance, etc): </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Car" placeholder="0.00">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="" class="control-label">Vacation : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Vacation" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Annual Tithe Return : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Annual-Tithe-Return" placeholder="0.00">
+        </div>
+    </div>
+</section>
+<!-- Income-->
+<section id="Income">
+    <a><h2 class="dropdown">Income &#10162; </h2></a>
+    <header class="form-group">
+        <span class="input-group-text">Total ÑGN:</span>
+        <output id="Income-Output"></output>
+    </header>
+    <div class="form-group">
+        <label for="" class="control-label">Monthly Pay : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Monthly-Pay" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Side Hustle: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Side-Hustle" placeholder="0.00">
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label">Ministration: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Ministration" placeholder="0.00">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label  class="control-label">Annual Tax Return : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <input type="number" id="Others" placeholder="0.00">
+        </div>
+    </div>
+</section>
+<!-- Budget Review-->
+<section id="BudgetReview">
+    <a><h2 class="dropdown">Budget Review &#10162; </h2></a>
+    <button id="budget-review-btn" class="btn btn-success">
+        Generate Review
+    </button>
+    
+    <div class="form-group">
+        <label for="" class="control-label">Total Monthly Savings : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <output id="Total-Monthly-Savings">
+
+            </output>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="control-label">Total Monthly Expenses : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <output id="Total-Monthly-Expenses">
+
+            </output>
+        </div>
+    </div>
+    <div class="form-group">
+        <label  class="control-label">Total Annual Expenses: </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN   /12</span>
+            <output id="Total-Monthly-Expenses">
+
+            </output>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="" class="control-label">Total Monthly Income : </label>
+        <div class="form-group">
+            <span class="input-group-text">NGN</span>
+            <output id="Total-Monthly-Income">
+
+            </output>
+        </div>
+    </div>
+    <div class="form-group">
+    <label for="" class="control-label">Under/Over Budget : </label>
+    <div class="form-group">
+        <span class="input-group-text">NGN</span>
+        <output id="Under-Over-Budget">
+
+        </output>
+    </div>
+</div>
+</section>
+
+
+    <script src="/budgetproject/app.js"></script>
+</body>
+</html>

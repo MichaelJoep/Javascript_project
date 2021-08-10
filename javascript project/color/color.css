@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(248, 246, 246);
+
+}
+li{
+    list-style: none;
+}
+nav .navbar-head{
+    background: rgb(237, 244, 247);
+    text-align: center;
+    height: 8vh;
+}
+nav .navbar-head h4{
+    margin-left: 4px;
+}
